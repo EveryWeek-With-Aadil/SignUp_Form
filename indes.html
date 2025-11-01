@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information</title>
+</head>
+<body>
+  <h2 class="good">User Information</h2>
+
+  <p><strong>Name:</strong> <span id="name"></span></p>
+  <p><strong>Father's Name:</strong> <span id="Fname"></span></p>
+  <p><strong>Email:</strong> <span id="Email"></span></p>
+  <p><strong>Password:</strong> <span id="Pass"></span></p>
+  <p><strong>Age:</strong> <span id="Age"></span></p>
+  <p><strong>Phone Number:</strong> <span id="phone_number"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("Fname").textContent = params.get("Fname");
+    document.getElementById("Email").textContent = params.get("Email");
+    document.getElementById("Pass").textContent = params.get("Pass");
+    document.getElementById("Age").textContent = params.get("Age");
+    document.getElementById("phone_number").textContent = params.get("phone_number");
+  </script>
+</body>
+</html>
